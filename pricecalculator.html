@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Price Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            function getBasePrice() {
+                var selectedFeature = $("input[name='feature']:checked").val();
+                if (selectedFeature === "10") {
+                    return 10.00;
+                } else if (selectedFeature === "25") {
+                    return 25.00;
+                } else if (selectedFeature === "40") {
+                    return 40.00;
+                }
+                return 0; 
+            }
+            function updateTotal() {
+                var quantity = parseInt($("#quantity").val()) || 0;
+                var featurePrice = parseFloat($("input[name='feature']:checked").val()) || 0;
+
+                var total = quantity * featurePrice;
+                $("#totalPrice").text(total.toFixed(2));
+            }
+
+            $("#update").click(function() {
+                updateTotal();
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+    <h1>Product Price Calculator</h1>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" value="1" min="1">
+
+    <br>
+    <div class="card">
+        <label>Features:</label>
+        <input type="radio" name="feature" value="10" checked> Basic (10.00)
+        <input type="radio" name="feature" value="25"> Premium (25.00)
+        <input type="radio" name="feature" value="40"> King (40.00)
+    </div>
+    <br>
+    <button id="update">Enter</button>
+
+    <p>Total Price: $<span id="totalPrice">10.00</span></p>
+</body>
+</html>

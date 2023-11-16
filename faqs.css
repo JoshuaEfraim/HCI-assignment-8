@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+}
+h3 {
+    cursor:pointer;
+}
+
+.top {
+    background-color: lightblue;
+    padding:20px;
+    margin: 0 0 5px 0;
+}

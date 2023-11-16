@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="image.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>ImageGallery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".toggle").click(function(){
+    var Target = $(this).data("target");
+    $("." + Target).toggle()
+  });
+});
+</script>
+</head>
+<body>
+    <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+    <div class="card">
+        <h1>Image Gallery</h1>
+        <h3>Click to show and hide</h3>
+        <li class="toggle" data-target="nature">Nature</li>
+        <li class="toggle" data-target="travel">Travel</li>
+        <li class="toggle" data-target="animals">Animals</li>
+    </div>
+    <div class="gallery">
+        <div class="nature">
+            <img src="nature.png">
+            <img src="mountain.png">
+        </div>
+        <div class="travel">
+            <img src="travel.png">
+            <img src="dubai.png">
+        </div>
+        <div class="animals">
+            <img src="tiger.png">
+            <img src="kangaroo.png">
+        </div>
+    </div>
+</body>
+</html>

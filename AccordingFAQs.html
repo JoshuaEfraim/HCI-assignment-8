@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="faqs.css">
+    <title>FAQs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").hide()
+            $("h3").click(function(){
+                $(this).next("p").toggle();
+            })  
+        })
+    </script>
+</head>
+<body>
+    <div class="top">
+        <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+        <h1>FAQs</h1>
+    </div>
+    <div class="question-1">
+        <h3>Why is efraim better than troy</h3>
+        <p>because he is</p>
+    </div>
+    <div class="question-2">
+        <h3>Why is troy not better than efraim</h3>
+        <p>because he is</p>
+    </div>
+    <div class="question-3">
+        <h3>Why is efraim the best</h3>
+        <p>because he is</p>
+    </div>
+</body>
+</html>
